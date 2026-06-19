@@ -856,18 +856,22 @@ em { font-style: italic; }
   .calc-type-cards { grid-template-columns: repeat(3, 1fr); }
 }
 @media (max-width: 600px) {
+  .calculator { padding: 3rem 1rem; }
+  .calc-inner { width: 100%; }
   .calc-type-cards { grid-template-columns: 1fr; }
   .calc-form-grid { grid-template-columns: 1fr; }
-  .calc-widget { padding: 1.25rem; box-sizing: border-box; width: 100%; overflow: hidden; }
-  .calc-steps { gap: 0; overflow: hidden; }
-  .calc-step { font-size: 0; gap: 0; }
-  .calc-step span { display: flex; width: 26px; height: 26px; font-size: 0.75rem; }
-  .calc-step-line { flex: 1; min-width: 0.5rem; }
-  .calc-result { padding: 1.25rem; box-sizing: border-box; }
+  .calc-widget { padding: 1rem; width: 100%; overflow: hidden; }
+  .calc-steps { gap: 0; }
+  .calc-step { font-size: 0; gap: 0; flex-shrink: 0; }
+  .calc-step span { display: flex; width: 24px; height: 24px; font-size: 0.7rem; flex-shrink: 0; }
+  .calc-step-line { flex: 1; min-width: 4px; }
+  .calc-result { padding: 1rem; }
+  .calc-result-main { flex-direction: column; gap: 0.25rem; }
   .calc-result-price { font-size: 2rem; }
-  .calc-nav { flex-direction: column; }
-  .calc-nav .btn { width: 100%; text-align: center; }
+  .calc-nav { flex-direction: column; gap: 0.75rem; }
+  .calc-nav .btn { width: 100%; text-align: center; box-sizing: border-box; }
   .calc-breakdown-item { font-size: 0.8rem; }
+  .calc-panel h3 { font-size: 1.3rem; }
 }
 
 /* ============================================
