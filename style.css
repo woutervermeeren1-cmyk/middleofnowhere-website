@@ -858,11 +858,16 @@ em { font-style: italic; }
 @media (max-width: 600px) {
   .calc-type-cards { grid-template-columns: 1fr; }
   .calc-form-grid { grid-template-columns: 1fr; }
-  .calc-widget { padding: 1.25rem; box-sizing: border-box; width: 100%; }
+  .calc-widget { padding: 1.25rem; box-sizing: border-box; width: 100%; overflow: hidden; }
   .calc-steps { gap: 0; overflow: hidden; }
   .calc-step { font-size: 0; gap: 0; }
   .calc-step span { display: flex; width: 26px; height: 26px; font-size: 0.75rem; }
   .calc-step-line { flex: 1; min-width: 0.5rem; }
+  .calc-result { padding: 1.25rem; box-sizing: border-box; }
+  .calc-result-price { font-size: 2rem; }
+  .calc-nav { flex-direction: column; }
+  .calc-nav .btn { width: 100%; text-align: center; }
+  .calc-breakdown-item { font-size: 0.8rem; }
 }
 
 /* ============================================
