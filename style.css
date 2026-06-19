@@ -3,6 +3,11 @@
    Design: dark jungle + warm amber
    ============================================ */
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 :root {
   --jungle:    #0D2318;
   --forest:    #1E4A32;
