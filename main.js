@@ -286,7 +286,6 @@ document.getElementById('calcForm').addEventListener('submit', async (e) => {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
-      mode: 'no-cors',
     });
   } catch (err) {
     console.error(err);
