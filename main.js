@@ -69,6 +69,7 @@ const PRIJZEN = {
     dagdeel:   { 'tot-50': 500,  '50-80': 800,  '80-120': 2100, '120+': 3500 },
     volledig:  { 'tot-50': null, '50-80': 1500, '80-120': 2650, '120+': 3500 },
     supervisie: 90,   // raming 3u
+    meubilair: 500,
   },
 };
 
@@ -232,6 +233,8 @@ function berekenPrijs() {
     items.push({ label: `Huur serre (${duur})`, bedrag: base });
     totaal += PRIJZEN.bedrijven.supervisie;
     items.push({ label: 'Supervisie (raming)', bedrag: PRIJZEN.bedrijven.supervisie });
+    totaal += PRIJZEN.bedrijven.meubilair;
+    items.push({ label: 'Meubilair & logistiek', bedrag: PRIJZEN.bedrijven.meubilair });
   }
 
   return { totaal, items };
