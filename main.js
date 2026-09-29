@@ -80,11 +80,10 @@ const VRAGEN = {
       id: 'personen',
       label: 'Aantal gasten',
       opties: [
-        { label: 'Tot 75 personen', value: 'tot-75' },
         { label: '75 – 100 personen', value: '75-100' },
         { label: '100 – 125 personen', value: '100-125' },
         { label: '125 – 150 personen', value: '125-150' },
-        { label: '150+ personen', value: '150+' },
+        { label: '150 – 250 personen', value: '150+' },
       ]
     },
     {
@@ -104,7 +103,7 @@ const VRAGEN = {
         { label: 'Tot 50 personen', value: 'tot-50' },
         { label: '50 – 80 personen', value: '50-80' },
         { label: '80 – 150 personen', value: '80-150' },
-        { label: '150+ personen', value: '150+' },
+        { label: '150 – 250 personen', value: '150+' },
       ]
     },
     {
@@ -199,7 +198,7 @@ function berekenPrijs() {
   const items = [];
 
   if (type === 'trouw') {
-    const p = antwoorden.personen || 'tot-75';
+    const p = antwoorden.personen || '75-100';
     const base = PRIJZEN.trouw.locatie[p];
     totaal += base;
     items.push({ label: 'Huur locatie', bedrag: base });
