@@ -56,7 +56,7 @@ const PRIJZEN = {
   trouw: {
     locatie: { 'tot-75': 5000, '75-100': 6500, '100-125': 7500, '125-150': 8500, '150+': 9500 },
     wijngaard: 1500,
-    supervisie: 240,   // raming 8u
+    supervisie: 360,   // raming 12u (Wouter 29/09)
     meubilair: 450,
   },
   families: {
