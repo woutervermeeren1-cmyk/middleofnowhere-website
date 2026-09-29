@@ -62,13 +62,13 @@ const PRIJZEN = {
   families: {
     serre:     { 'tot-50': 750,  '50-80': 1000, '80-150': 1720, '150+': 2500 },
     wijngaard: { 'tot-50': 950,  '50-80': 1300, '80-150': 2000, '150+': 3000 },
-    supervisie: 150,  // raming 5u
+    supervisie: 240,  // raming 8u (Wouter 29/09)
     meubilair: 500,
   },
   bedrijven: {
     dagdeel:   { 'tot-50': 500,  '50-80': 800,  '80-120': 2100, '120+': 3500 },
     volledig:  { 'tot-50': null, '50-80': 1500, '80-120': 2650, '120+': 3500 },
-    supervisie: 90,   // raming 3u
+    supervisie: 150,  // raming 5u halve dag, 9u (€270) hele dag (Wouter 29/09)
     meubilair: 500,
   },
 };
@@ -230,8 +230,9 @@ function berekenPrijs() {
     const base = PRIJZEN.bedrijven[duur][p] || PRIJZEN.bedrijven.dagdeel[p];
     totaal += base;
     items.push({ label: `Huur serre (${duur})`, bedrag: base });
-    totaal += PRIJZEN.bedrijven.supervisie;
-    items.push({ label: 'Supervisie (raming)', bedrag: PRIJZEN.bedrijven.supervisie });
+    const sup = duur === 'volledig' ? 270 : PRIJZEN.bedrijven.supervisie;
+    totaal += sup;
+    items.push({ label: 'Supervisie (raming)', bedrag: sup });
     totaal += PRIJZEN.bedrijven.meubilair;
     items.push({ label: 'Meubilair & logistiek', bedrag: PRIJZEN.bedrijven.meubilair });
   }
